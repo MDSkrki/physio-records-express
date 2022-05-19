@@ -1,7 +1,8 @@
 import express from "express";
+import 'dotenv/config';
 
 const app = express();
 
-app.listen(4000, () => {
-  console.log("Server lifted at port 4000");
+app.listen(process.env.PORT, () => {
+  console.log(`Server lifted at port ${process.env.PORT}`);
 });
