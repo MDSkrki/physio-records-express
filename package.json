@@ -1,0 +1,27 @@
+{
+  "name": "physio-records-express",
+  "version": "1.0.0",
+  "description": "API for physio-records Final Project",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:dev": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MDSkrki/physio-records-express.git"
+  },
+  "author": "Mihai Daniel Somkereki",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MDSkrki/physio-records-express/issues"
+  },
+  "homepage": "https://github.com/MDSkrki/physio-records-express#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  }
+}
