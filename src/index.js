@@ -2,6 +2,7 @@ import express from "express";
 import "dotenv/config";
 import morgan from "morgan";
 import logger from "./config/logger.js";
+import userRouter from './user/router.js';
 
 const app = express();
 
@@ -11,6 +12,8 @@ app.use(morgan('tiny', {stream: logger.stream}));
 app.get("/api/echo", (req, res) => {
   res.json({ api: "Alive" });
 });
+
+app.use('/api/user', userRouter);
 
 export default app.listen(process.env.PORT, () => {
   console.log(`Server lifted at port ${process.env.PORT}`);
