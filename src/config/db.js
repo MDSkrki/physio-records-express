@@ -14,3 +14,12 @@ export const connect = async () => {
         console.log(err)
     }
 }
+
+export const disconnect = async () => {
+    try {
+        await sequelize.close();
+        console.log('Successfully disconnected');
+    } catch (err) {
+        console.log(err);
+    }
+}

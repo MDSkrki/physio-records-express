@@ -1,6 +1,6 @@
 import server from "../src/index.js";
 import supertest from 'supertest';
-import { connect, sequelize } from "../src/config/db.js";
+import { connect, disconnect } from "../src/config/db.js";
 
 const app = supertest(server);
 
@@ -10,12 +10,7 @@ beforeAll(async ()=>{
 
 afterAll(async ()=>{
     server.close();
-
-    try {
-        await sequelize.close();
-    } catch (error) {
-        console.log(error);
-    }
+    disconnect();
 });
 
 describe("Connectivity tests", () => {
