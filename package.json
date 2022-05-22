@@ -4,6 +4,9 @@
   "description": "API for physio-records Final Project",
   "main": "index.js",
   "type": "module",
+  "jest": {
+    "setupFilesAfterEnv": ["./test/jest.setup.js"]
+  },
   "scripts": {
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
     "start:dev": "nodemon src/index.js"
