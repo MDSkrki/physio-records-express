@@ -9,6 +9,8 @@ const app = express();
 // Middleware that will send info in logger about http requests
 app.use(morgan('tiny', {stream: logger.stream}));
 
+app.use(express.json());
+
 app.get("/api/echo", (req, res) => {
   res.json({ api: "Alive" });
 });
