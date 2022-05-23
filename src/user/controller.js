@@ -1,5 +1,5 @@
 import logger from "../config/logger.js"
-import { User } from "../config/loader.js";
+import { User } from "../shared/loader.js";
 
 export const register = async (req, res) => {
     try {
