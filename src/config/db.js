@@ -22,6 +22,7 @@ export const connect = async () => {
 
 export const disconnect = async () => {
   try {
+    await sequelize.drop();
     await sequelize.close();
     console.log("Successfully disconnected");
   } catch (err) {
