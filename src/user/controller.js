@@ -1,5 +1,6 @@
 import logger from "../config/logger.js"
 import { User } from "../shared/loader.js";
+import { hasher } from "../shared/services/encryption.js";
 
 export const register = async (req, res) => {
     try {
@@ -10,7 +11,7 @@ export const register = async (req, res) => {
             name: req.body.name,
             surname: req.body.surname,
             email: req.body.email,
-            password: req.body.password,
+            password: await hasher(req.body.password),
             phone_number: req.body.phone_number, 
         }
     
